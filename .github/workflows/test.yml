@@ -10,6 +10,7 @@ jobs:
   test-job-1:
     runs-on: ubuntu-latest
     steps:
-      - name: test1
-        run: echo "test"
+      - name: check java
+        run: java -version
+
 
