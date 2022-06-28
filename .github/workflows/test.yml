@@ -10,7 +10,9 @@ jobs:
   test-job-1:
     runs-on: ubuntu-latest
     steps:
-      - name: check java
+      - name: Check Java Version
         run: java -version
 
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
