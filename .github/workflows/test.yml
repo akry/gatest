@@ -19,6 +19,9 @@ jobs:
       - name: Run Test
         run: ./gradlew test
 
+      - name: Build JAR file
+        run: ./gradlew build -x test
+
       - name: Create docker image
         run: |
           docker build -t akry:latest .
