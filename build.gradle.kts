@@ -34,3 +34,12 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+/**
+ * This setting is to disable building the plain archive (xxxx-plain.jar), which Spring Boot 2.5.0 or above generates by default.
+ * https://docs.spring.io/spring-boot/docs/2.5.0/gradle-plugin/reference/htmlsingle/#packaging-executable.and-plain-archives
+ */
+tasks.getByName<Jar>("jar") {
+	enabled = false
+}
+
